@@ -22,7 +22,7 @@ class Inputs extends Component {
           <Image 
             style={styles.imgStyle} 
             resizeMode="contain" 
-            source={require('./assets/image/healthHubLogo.png')}
+            source={require('./assets/images/healthHubLogo.png')}
           />
         </View>
             <TextInput style = {styles.input}
@@ -46,6 +46,10 @@ class Inputs extends Component {
                }>
                <Text style = {styles.submitButtonText}> Submit </Text>
             </TouchableOpacity>
+            <Text style = {styles.link}
+                  onPress={() => Linking.openURL('#')}>
+              Create Account
+            </Text>
             <Text style = {styles.link}
                   onPress={() => Linking.openURL('#')}>
               Forgot Password
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
   },
 
   link: {
-    margin: 24,
+    margin: 12,
     color: "blue",
     fontSize: 16,
     fontWeight: "bold",
