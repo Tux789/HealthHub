@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation'
 import CreateAccountScreen from './modules/create-account/create-account'
 import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import styles from './style'
-
+console.log(styles.link);
 class Inputs extends Component {
    state = {
       email: '',
@@ -51,12 +51,19 @@ class Inputs extends Component {
                }>
                <Text style = {styles.submitButtonText}> Submit </Text>
             </TouchableOpacity>
-            <Button style = {styles.link}
-                  onPress={() => this.props.navigation.navigate('Account')}
-                  title="Create Account"/>
-            <Button style = {styles.link}
-                  onPress={() => this.props.navigation.navigate('Recover')}
-                  title="Forgot Password"/>
+
+            <TouchableOpacity 
+                style = {styles.linkinfo}
+                onPress={() => this.props.navigation.navigate('Account')}>
+                <Text style = {styles.linktext}> Create Account </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity 
+                style = {styles.linkinfo}
+                onPress={() => this.props.navigation.navigate('Recover')}>
+                <Text style = {styles.linktext}> Forgot Password </Text>
+            </TouchableOpacity>
+          
             <Text style ={styles.paragraph}>
             You should consult with a healthcare professional before starting any diet, exercise, supplementation or medication program. Statements on Health Hub about products and health conditions have not been evaluated by the U.S. Food and Drug Administration and are not intended to diagnose, treat, cure, or prevent disease. If you have a health concern of any kind consult with your health care professional. Information presented by Living Fuel is for educational purposes only and is not meant to substitute for the advice of a doctor or other medical professional. Health Hub does not make any medical claims or warranties regarding the use of the products listed on this site. The information presented is general in nature and these remedies may not be for everyone. Like other remedies, supplements and herbs do have side effects. You should consult you doctor before taking any medication.
             </Text>
