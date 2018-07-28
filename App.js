@@ -4,7 +4,8 @@ import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image } from 'reac
 class Inputs extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    result: '',
   }
   handleEmail = (text) => {
     this.setState({ email: text })
@@ -14,7 +15,7 @@ class Inputs extends Component {
   }
   
   //Jeff's insertion for Auth
-  apiUrl = process.env.API_BASE_URL || "https://fathomless-shore-28246.herokuapp.com/";
+  apiUrl = process.env.API_BASE_URL || "https://fathomless-shore-28246.herokuapp.com";
   login = (email, pass) => {
     fetch(`${this.apiUrl}/api/login`, {
       method: 'POST',
@@ -23,7 +24,8 @@ class Inputs extends Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email:email,
+        username: "Test Account",
+        email: email,
         password: pass,
       })
     })
