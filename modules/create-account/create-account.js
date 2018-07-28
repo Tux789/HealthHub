@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button } from 'react-native'
-import style from './style'
+import React, { Component } from 'react';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView } from 'react-native';
+import styles from '../../style';
+import apiUrl from "../../apiRoutes";
 
 class CreateAccountScreen extends React.Component {
   state = {
@@ -63,8 +64,8 @@ class CreateAccountScreen extends React.Component {
             <Text style = {styles.submitButtonText}> Submit </Text>
          </TouchableOpacity>
          <Button style = {styles.link}
-               onPress={() => this.props.navigation.navigate('Account')}
-               title="Create Account"/>
+               onPress={() => this.props.navigation.navigate('Home')}
+               title="Login to Account"/>
          <Button style = {styles.link}
                onPress={() => this.props.navigation.navigate('Recover')}
                title="Forgot Password"/>

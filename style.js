@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
   },
   
    link: {
-    //  marginTop: 12,
-    //  marginBottom: 5,
+     marginTop: 12,
+     marginBottom: 5,
     //  color: "blue",
      fontSize: 6,
     // //  fontWeight: "bold",

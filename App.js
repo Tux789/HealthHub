@@ -20,7 +20,7 @@ const RootStack = createStackNavigator(
 );
 
 
-class App extends Component {
+export default class App extends Component {
   apiUrl = process.env.API_BASE_URL || "https://fathomless-shore-28246.herokuapp.com";
   render() {
     return <RootStack/>;
