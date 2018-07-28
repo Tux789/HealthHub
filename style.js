@@ -61,16 +61,26 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   
-   link: {
+  //  link: {
+  //    marginTop: 12,
+  //    marginBottom: 5,
+  //   //  color: "blue",
+  //    fontSize: 6,
+  //   // //  fontWeight: "bold",
+  //   //  textAlign: "center",
+  //   //  borderBottomColor: "blue",
+  //  },
+   linkinfo: {
      marginTop: 12,
      marginBottom: 5,
-    //  color: "blue",
-     fontSize: 6,
-    // //  fontWeight: "bold",
-    //  textAlign: "center",
-    //  borderBottomColor: "blue",
    },
 
+   linktext: {
+    color: "blue",
+    fontSize: 16,
+    textAlign: "center",
+    borderBottomColor: "blue",
+   },
   });
 
 export default styles;
