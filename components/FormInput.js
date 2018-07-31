@@ -5,10 +5,11 @@ import styles from '../style';
 const FormInput = (props) =>
     <TextInput style={styles.input}
         underlineColorAndroid="transparent"
-        placeholder= {props.name}
+        placeholder={props.name}
         placeholderTextColor="#60718d"
         autoCapitalize="none"
-        onChangeText={props.onchange} {...props}/>
+        {...props}
+    />
 
 
 export default FormInput;
