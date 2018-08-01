@@ -18,7 +18,7 @@ class Inputs extends Component {
 
   //Jeff's change for login auth logic
   login = (email, pass) => {
-    fetch(`${this.apiUrl}/api/login`, {
+    fetch(`${apiUrl}/api/login`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

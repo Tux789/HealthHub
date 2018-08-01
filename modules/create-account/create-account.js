@@ -25,7 +25,7 @@ class CreateAccountScreen extends React.Component {
 
   //Jeff's change for login auth logic
   signup = (username, email, pass) => {
-    fetch(`${this.apiUrl}/api/signup`, {
+    fetch(`${apiUrl}/api/signup`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -50,14 +50,14 @@ class CreateAccountScreen extends React.Component {
           placeholderTextColor="#60718d"
           autoCapitalize="none"
           onChangeText={this.handleUsername} /> */}
-          <FormInput name="Username" onchange={this.handleUsername} />
+          <FormInput name="Username" onChangeText={this.handleUsername} />
         {/* <TextInput style={styles.input}
           underlineColorAndroid="transparent"
           placeholder="Email"
           placeholderTextColor="#60718d"
           autoCapitalize="none"
           onChangeText={this.handleEmail} /> */}
-          <FormInput name="Email" onchange={this.handleEmail}/>
+          <FormInput name="Email" onChangeText={this.handleEmail}/>
 
         {/* <TextInput style={styles.input}
           underlineColorAndroid="transparent"
@@ -65,7 +65,7 @@ class CreateAccountScreen extends React.Component {
           placeholderTextColor="#60718d"
           autoCapitalize="none"
           onChangeText={this.handlePassword} /> */}
-          <FormInput name="Password" secureTextEntry={true} onchange={this.handlePassword} />
+          <FormInput name="Password" secureTextEntry={true} onChangeText={this.handlePassword} />
 
         {/* <TouchableOpacity
           style={styles.submitButton}
@@ -74,7 +74,7 @@ class CreateAccountScreen extends React.Component {
           }>
           <Text style={styles.submitButtonText}> Submit </Text>
         </TouchableOpacity> */}
-        <SubmitButton onPress={() =>this.login(this.state.username, this.state.email, this.state.password)} />
+        <SubmitButton onPress={() =>this.signup(this.state.username, this.state.email, this.state.password)} />
         <NavButton onPress={() => this.props.navigation.navigate("Home")}>Login to Account</NavButton>
         <NavButton onPress={() => this.props.navigation.navigate("Recover")}>Forgot Password</NavButton>
         <Text style={styles.paragraph}>

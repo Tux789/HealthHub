@@ -8,7 +8,9 @@ const FormInput = (props) =>
         placeholder= {props.name}
         placeholderTextColor="#60718d"
         autoCapitalize="none"
-        onChangeText={props.onchange} {...props}/>
+        // onChangeText={props.onchange} 
+        {...props}/>
+        
 
 
 export default FormInput;
