@@ -74,6 +74,7 @@ class CreateAccountScreen extends React.Component {
           }>
           <Text style={styles.submitButtonText}> Submit </Text>
         </TouchableOpacity> */}
+
         <SubmitButton onPress={() =>this.signup(this.state.username, this.state.email, this.state.password)} />
         <NavButton onPress={() => this.props.navigation.navigate("Home")}>Login to Account</NavButton>
         <NavButton onPress={() => this.props.navigation.navigate("Recover")}>Forgot Password</NavButton>
