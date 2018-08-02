@@ -4,15 +4,16 @@ import { createStackNavigator } from 'react-navigation'
 import CreateAccountScreen from './modules/create-account/create-account'
 import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import Inputs from "./modules/login-account/login-account";
+import HomeScreen from "./modules/home/home";
+
 import styles from './style'
-
-
 
 const RootStack = createStackNavigator(
   {
     Home: Inputs,
     Account: CreateAccountScreen,
-    Recover: RecoverPasswordScreen
+    Recover: RecoverPasswordScreen,
+    Info: HomeScreen
   }, 
   {
     initialRouteName: 'Home'
