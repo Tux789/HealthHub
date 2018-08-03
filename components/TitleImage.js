@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView } from 'react-native';
-import styles from '../style';
+// import styles from '../style';
+
+
+
+const styles = StyleSheet.create({
+  imgContain: {
+    paddingTop: 10,
+    paddingBottom: 20,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  imgStyle: {
+    width: 190,
+    backgroundColor: 'white',
+    justifyContent: "center",
+  },
+
+}); 
 
 const TitleImage = props =>
 
