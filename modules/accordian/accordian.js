@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-
+import styles from './style';
 class Accordian extends Component {
     constructor() {
         super();
@@ -20,7 +20,7 @@ class Accordian extends Component {
 
     displayInfo() {
         let info = (
-            <View>
+            <View style={styles.accordionplace}>
                 <View>
                     <Text> Expanded info </Text>
                 </View>
@@ -44,7 +44,7 @@ class Accordian extends Component {
         return (   
             <View>     
                 <View> 
-                    <Text onPress={this.expand}> Name </Text> 
+                    <Text onPress={this.expand}> This is an accordion </Text> 
                 </View>
                 <View> { this.displayInfo() } </View> 
             </View>

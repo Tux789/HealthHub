@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
        borderWidth: 1,
        paddingLeft: 8,
     },
+    
   
     submitButton: {
        backgroundColor: '#60718d',
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     },
   
     imgStyle: {
-     width: 190,
+     width: 180,
      backgroundColor: 'white',
      justifyContent: "center",
    },
@@ -81,6 +82,40 @@ const styles = StyleSheet.create({
     textAlign: "center",
     borderBottomColor: "blue",
    },
+   button: {
+    position: 'absolute',
+    bottom: 20,
+    left: 199,
+    paddingLeft: 10
+   },
+   iconcool: {
+    width: 25
+   },
+   
+   flytext: {
+   fontSize: 7,
+   color: "white",
+   marginTop: 0,
+   padding: 0
+   },
+
+   iconsmall: {
+    width: 16,
+    marginTop: 0,
+    padding: 0
+   },
+
+   iconsmalltwo: {
+    width: 20,
+    marginTop: 0,
+    padding: 0
+   },
+
+   iconmain: {
+     
+
+   }
+    
   });
 
 export default styles;
