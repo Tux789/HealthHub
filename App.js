@@ -15,10 +15,10 @@ const RootStack = createStackNavigator(
     Login: Inputs,
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
-    // Info: HomeScreen
+     Info: Test,
   }, 
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'Info'
   }
 );
 

@@ -4,6 +4,7 @@ import { Button, ButtonGroup } from 'react-native-elements';
 import NavButton from "../components/NavButton";
 import FormInput from "../components/FormInput";
 import TitleImage from "../components/TitleImage";
+import ActivityCard from "../components/ActivityCard/ActivityCard";
 
 import apiUrl from '../apiRoutes';
 
@@ -24,9 +25,10 @@ componentDidMount(){
 }
 
     render() {
-       return <View>
-           <TitleImage />           
-           </View>
+       return <ScrollView>
+           <TitleImage />   
+           <ActivityCard />        
+           </ScrollView>
     }
 }
 export default TestView;
