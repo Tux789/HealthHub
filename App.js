@@ -7,7 +7,7 @@ import Inputs from "./modules/login-account/login-account";
 import HomeScreen from "./modules/home/home";
 import FeedMaster from "./modules/feed/feed";
 import { Font } from 'expo';
-
+import UserDash from "./modules/userDash/userDash";
 import styles from './style'
 
 const RootStack = createStackNavigator(
@@ -16,7 +16,8 @@ const RootStack = createStackNavigator(
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
     Info: HomeScreen,
-    Feed: FeedMaster
+    Feed: FeedMaster,
+    UserDash: UserDash
   }, 
   {
     initialRouteName: 'Home'

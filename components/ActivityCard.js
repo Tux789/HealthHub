@@ -7,7 +7,6 @@ class Activity extends Component {
           chart,
           activityType,
           activityAmt,
-          comments=[]
       }
       
     render() {
@@ -19,3 +18,5 @@ class Activity extends Component {
       </view>
     }
   }
+
+  export default ActivityCard;
