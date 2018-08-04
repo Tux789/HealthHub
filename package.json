@@ -28,5 +28,10 @@
     "react-native-elements": "^0.19.1",
     "react-navigation": "^2.9.2",
     "react-router-native": "^4.3.0"
+  },
+  "rnpm": {
+    "assets": [
+      "fonts"
+    ]
   }
 }
