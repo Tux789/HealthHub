@@ -27,6 +27,7 @@ componentDidMount(){
     render() {
        return <ScrollView>
            <TitleImage />   
+           <ActivityCard />
            <ActivityCard />        
            </ScrollView>
     }

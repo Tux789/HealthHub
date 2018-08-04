@@ -5,7 +5,6 @@ import CreateAccountScreen from './modules/create-account/create-account'
 import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import Inputs from "./modules/login-account/login-account";
 import Test from "./modules/test-page";
-import styles from './style'
 import HomeScreen from "./modules/home/home";
 import FeedMaster from "./modules/feed/feed";
 import { Font } from 'expo';
@@ -20,7 +19,8 @@ const RootStack = createStackNavigator(
     Recover: RecoverPasswordScreen,
     Info: HomeScreen,
     Feed: FeedMaster,
-    UserDash: UserDash
+    UserDash: UserDash,
+    Test: Test,
   }, 
   {
     initialRouteName: 'Info'
