@@ -5,6 +5,8 @@ import CreateAccountScreen from './modules/create-account/create-account'
 import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import Inputs from "./modules/login-account/login-account";
 import HomeScreen from "./modules/home/home";
+import FeedMaster from "./modules/feed/feed";
+import { Font } from 'expo';
 
 import styles from './style'
 
@@ -13,7 +15,8 @@ const RootStack = createStackNavigator(
     Home: Inputs,
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
-    Info: HomeScreen
+    Info: HomeScreen,
+    Feed: FeedMaster
   }, 
   {
     initialRouteName: 'Home'
@@ -22,6 +25,13 @@ const RootStack = createStackNavigator(
 
 
 export default class App extends Component {
+  componentDidMount() {
+    Font.loadAsync({
+      'futura-book': require('./assets/fonts/FUW.ttf'),
+      'great-vibes': require('./assets/fonts/GreatVibes-Regular.otf'),
+      'raleway-regular': require('./assets/fonts/Raleway-Regular.ttf')
+    });
+  }
   apiUrl = process.env.API_BASE_URL || "https://fathomless-shore-28246.herokuapp.com";
   render() {
     return <RootStack/>;

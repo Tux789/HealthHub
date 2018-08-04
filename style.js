@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
      paddingBottom: 15,
      paddingLeft: 15,
      paddingRight: 15,
+
    },
 
    footnote: {
@@ -110,12 +111,11 @@ const styles = StyleSheet.create({
     marginTop: 0,
     padding: 0
    },
+   accordionstyle: {
+    fontFamily: 'raleway-regular',
+   } 
 
-   iconmain: {
-     
 
-   }
-    
   });
 
 export default styles;
