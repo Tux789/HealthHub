@@ -27,7 +27,7 @@ class Activity extends Component {
       backgroundColor: '#ffffff',
       backgroundGradientFrom: '#ffffff',
       backgroundGradientTo: '#aaaaaa',
-      color: (opacity =0.5) => `rgba(20, 20,20, ${opacity})`,
+      color: (opacity = 0.5) => `rgba(20, 20,20, ${opacity})`,
       style: {
         borderRadius: 16
       }
