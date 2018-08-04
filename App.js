@@ -5,6 +5,7 @@ import CreateAccountScreen from './modules/create-account/create-account'
 import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import Inputs from "./modules/login-account/login-account";
 import HomeScreen from "./modules/home/home";
+import UserDash from "./modules/userDash/userDash";
 
 import styles from './style'
 
@@ -13,7 +14,8 @@ const RootStack = createStackNavigator(
     Home: Inputs,
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
-    Info: HomeScreen
+    Info: HomeScreen,
+    UserDash: UserDash
   }, 
   {
     initialRouteName: 'Home'

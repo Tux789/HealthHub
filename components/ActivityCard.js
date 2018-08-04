@@ -19,3 +19,5 @@ class Activity extends Component {
       </view>
     }
   }
+
+  export default ActivityCard;
