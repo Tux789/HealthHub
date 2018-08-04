@@ -21,9 +21,10 @@ const RootStack = createStackNavigator(
     Feed: FeedMaster,
     UserDash: UserDash,
     Test: Test,
+    ActivityInput: Test
   }, 
   {
-    initialRouteName: 'Info'
+    initialRouteName: 'Login'
   }
 );
 
