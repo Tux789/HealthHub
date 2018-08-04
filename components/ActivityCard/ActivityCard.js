@@ -3,8 +3,8 @@ import { View, Dimensions, Text, TouchableOpacity, TextInput, StyleSheet, Image,
 import styles from '../../style';
 import { LineChart } from "react-native-chart-kit";
 import Comment from "./Comment";
-import CommentsSection from "./CommentsSection"
-import 'babel-polyfill'
+import CommentsSection from "./CommentsSection";
+import 'babel-polyfill';
 
 class Activity extends Component {
   state = {
