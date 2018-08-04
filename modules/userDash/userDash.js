@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import ActionButton from 'react-native-circular-action-menu';
 import styles from '../../style';
-import ActivityCard from '../../components/ActivityCard';
+// import ActivityCard from '../../components/ActivityCard';
 
 
 //NOTE: Working on rendering Activity cards component from activity JS. Crystal is working on creating a form component, that we'll also need to render in this user-dash.js file.
@@ -35,7 +35,7 @@ class UserDash extends Component {
     render() {
         return (
             <View style={styles.home}> 
-                <Text> Sup! {this.state.user.firstname} </Text>
+                {/* <Text> Sup! {this.state.user.firstname} </Text>
                 {this.state.user.goals.map(goal => 
                     <ActivityCard 
                         type={goal}
@@ -43,7 +43,8 @@ class UserDash extends Component {
                             (activity) => activity.goalType === goal
                         )}
                     />
-                )}
+                )} */}
+                <Text>This Text Here please</Text>
             </View>
         );
     }

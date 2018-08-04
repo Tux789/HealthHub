@@ -7,7 +7,6 @@ class Activity extends Component {
           chart,
           activityType,
           activityAmt,
-          comments=[]
       }
       
     render() {
