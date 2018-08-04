@@ -30,7 +30,10 @@ class Inputs extends Component {
         password: pass,
       })
     })
-      .then((results) => console.log(results));
+      .then((results) =>{ 
+        if(results.status)
+        console.log(results)
+      });
   }
   //End Jeff's insertion for login auth logic
 

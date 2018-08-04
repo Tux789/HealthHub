@@ -3,19 +3,19 @@ import { View, Text } from 'react-native';
 import styles from './style';
 import { Font } from 'expo';
 class Accordian extends Component {
-    constructor() {
-        super();
-        this.state = {
-            expand: false
-        };
-        this.expand = this.expand.bind(this);
+
+    state = {
+        expand: false,
+
     }
 
+
+
     expand() {
-        if(this.state.expand) {
-            this.setState({expand: false});
+        if (this.state.expand) {
+            this.setState({ expand: false });
         } else {
-            this.setState({expand: true});
+            this.setState({ expand: true });
         }
     }
 
@@ -34,7 +34,7 @@ class Accordian extends Component {
             </View>
         );
 
-        if(this.state.expand) {
+        if (this.state.expand) {
             return info;
         } else {
             return <View></View>;
@@ -47,7 +47,7 @@ class Accordian extends Component {
                 <View> 
                     <Text style={styles.accordionstyle} onPress={this.expand}> This is an accordion </Text> 
                 </View>
-                <View> { this.displayInfo() } </View> 
+                <View> {this.displayInfo()} </View>
             </View>
         );
     }
