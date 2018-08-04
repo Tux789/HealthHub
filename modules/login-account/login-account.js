@@ -107,7 +107,7 @@ testAddRoute = () => {
             onPress={() => this.props.navigation.navigate('Recover')}>
             <Text style={styles.linktext}> Forgot Password </Text>
           </TouchableOpacity>
-          <NavButton onPress={this.testRoute}>Test A thing</NavButton>
+          <NavButton onPress={() => this.props.navigation.navigate('Info')}> Home </NavButton>
           <NavButton onPress={this.testAddRoute}>Test A thing</NavButton>
 
           <Text style={styles.paragraph}>

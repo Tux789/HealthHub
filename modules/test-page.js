@@ -20,8 +20,7 @@ componentDidMount(){
               if(results.status === "401"){
                 this.props.navigation.navigate('Login');
           }
-        });
-      
+        })      
 }
 
     render() {

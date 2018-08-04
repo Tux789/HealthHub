@@ -6,15 +6,16 @@ import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import Inputs from "./modules/login-account/login-account";
 import Test from "./modules/test-page";
 import styles from './style'
-
+import HomeScreen from "./modules/home/home";
 
 
 const RootStack = createStackNavigator(
   {
-    Home: Test,
+    Home: HomeScreen,
     Login: Inputs,
     Account: CreateAccountScreen,
-    Recover: RecoverPasswordScreen
+    Recover: RecoverPasswordScreen,
+    // Info: HomeScreen
   }, 
   {
     initialRouteName: 'Home'
