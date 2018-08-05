@@ -47,7 +47,11 @@ class Accordian extends Component {
                 <View> 
                     <Text style={styles.accordionstyle} onPress={this.expand}> This is an accordion </Text> 
                 </View>
-                <View> { this.displayInfo() } </View> 
+                <View style={styles.accordionoutput}> 
+                    <View>
+                    { this.displayInfo() } 
+                    </View> 
+                </View>
             </View>
         );
     }

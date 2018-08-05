@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView, StyleSheet } from 'react-native';
 import { Button, ButtonGroup, Card, ListItem } from 'react-native-elements';
+import NavButton from "../../components/NavButton";
+import FormInput from "../../components/FormInput";
+
 import apiUrl from '../../apiRoutes';
 
 class UserFeed extends Component {
+	
 	state = {
 		friends: [
 			{ user: 'Tyler' },

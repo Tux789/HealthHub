@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
       textTitle: {
         textAlign: 'center',
         paddingBottom: 30,
-        fontFamily: 'raleway-regular',
+        // fontFamily: 'raleway-regular',
         fontSize: 14
       } 
 });
