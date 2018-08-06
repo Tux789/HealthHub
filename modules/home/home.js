@@ -20,7 +20,9 @@ class HomeScreen extends Component {
                 </View>
                     <Text style={styles.textTitle}> Home component </Text>
                     <View>
-                    <Accordian></Accordian>
+                    <Accordian>
+                        
+                    </Accordian>
                     </View>
                     <RainbowButtons />
 
