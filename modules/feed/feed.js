@@ -7,7 +7,7 @@ import TitleImage from "../../components/TitleImage";
 import RainbowButtons from "../../components/RainbowButtons";
 
 
-class HomeScreen extends Component {
+class FeedMaster extends Component {
     render() {
         return (
             <ScrollView>
@@ -19,9 +19,9 @@ class HomeScreen extends Component {
                     source={require('../../assets/images/healthHubLogo.png')}
                     />
                 </View>
-                    <Text style={styles.textTitle}> Home component </Text>
+                    <Text style={styles.textTitle}>Feed Page MAN!!!!!!!!</Text>
                     <View>
-                    <Accordian></Accordian>
+
                     </View>
                     <RainbowButtons />
 
@@ -31,4 +31,4 @@ class HomeScreen extends Component {
     }
 };
 
-export default HomeScreen;
+export default FeedMaster;
