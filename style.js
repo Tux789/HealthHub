@@ -91,11 +91,12 @@ const styles = StyleSheet.create({
     borderBottomColor: "blue",
    },
    button: {
-    position: 'absolute',
-    bottom: 20,
-    left: 199,
-    paddingLeft: 10
+      marginBottom: 30
    },
+   buttonContainer: {
+
+   },
+
    iconcool: {
     width: 25
    },
@@ -133,13 +134,18 @@ const styles = StyleSheet.create({
     width: 350,
     marginBottom: 25
   },
+
    home: {
-    height: 670,
+    flex:1,
+    justifyContent: 'center',
     backgroundColor: 'white',
    },
+   scrollView: {
+    height: 400
+   },
    imgContain2: {
-    paddingTop: 60,
-    paddingBottom: 65,
+    paddingTop: 0,
+    paddingBottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
    },

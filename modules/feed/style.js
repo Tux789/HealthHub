@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
         left: 190,
     },
     home: {
-        height: 670,
+        flex:1,
+        justifyContent: 'center',
         backgroundColor: 'white',
     },
     container: {

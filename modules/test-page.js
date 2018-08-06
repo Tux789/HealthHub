@@ -27,20 +27,24 @@ componentDidMount(){
 }
 
     render() {
-       return <ScrollView>
-         <View style={styles.home}> 
-            <View style={styles.imgContain2}>
-              <TitleImage />  
-            </View>
-            <View style={styles.AcardStyle}> 
-                <ActivityCard />
-            </View>
-            <View style={styles.AcardStyle2}> 
-                <ActivityCard />  
-            </View>      
-         </View>    
-         <RainbowButtons />
-           </ScrollView>
+       return (
+        <View style={styles.home}>
+          <ScrollView style={styles.scrollView}>
+            <View > 
+                <View style={styles.imgContain2}>
+                  <TitleImage />  
+                </View>
+                <View style={styles.AcardStyle}> 
+                    <ActivityCard />
+                </View>
+                <View style={styles.AcardStyle2}> 
+                    <ActivityCard />  
+                </View>      
+            </View>    
+          </ScrollView>
+          <RainbowButtons></RainbowButtons>
+        </View>
+       )
     }
 }
 export default TestView;

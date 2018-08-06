@@ -6,11 +6,13 @@ const styles = StyleSheet.create({
     button: {
         position: 'absolute',
         bottom: 20,
-        left: 190,
+        left: 150,
     },
     home: {
-        height: 670,
+        flex:1,
+        //height: 670,
         backgroundColor: 'white',
+        justifyContent: 'center'
     },
     container: {
         backgroundColor: 'white',

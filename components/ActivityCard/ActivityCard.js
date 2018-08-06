@@ -6,20 +6,22 @@ import Comment from "./Comment";
 import CommentsSection from "./CommentsSection";
 import 'babel-polyfill';
 
+import {MyStyles} from "./style";
+
 class Activity extends Component {
   state = {
     chartData:{
      // labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-  datasets: [{
-    data: [
-      50,
-      20,
-      2,
-      86,
-      71,
-      100
-    ]
-  }
+        datasets: [{
+          data: [
+            50,
+            20,
+            2,
+            86,
+            71,
+            100
+          ]
+        }
 ]
     },
     
@@ -27,7 +29,7 @@ class Activity extends Component {
       backgroundColor: '#ffffff',
       backgroundGradientFrom: '#ffffff',
       backgroundGradientTo: '#aaaaaa',
-      color: (opacity = 0.5) => `rgba(20, 20,20, ${opacity})`,
+      color: (opacity = 1.0) => `rgba(20, 20,20, ${opacity})`,
       style: {
         borderRadius: 16
       }
@@ -90,19 +92,21 @@ class Activity extends Component {
 
   render() {
     // use view instead of div when using React Native
-    return  <TouchableOpacity onPress={this.handleClick}>
-      <LineChart  data={this.state.chartData}
-          width={Dimensions.get('window').width}
-          datasets={0}
-          height={120}
-          width={385}
-          chartConfig={this.state.chartConfig}/>
-      <Text style={styles.textActStyle}> 
-      {this.state.activityType} {this.state.activityAmt}</Text>
-      { this.expandedInfo() }
-    </TouchableOpacity>
-
- 
+    return ( 
+      <TouchableOpacity onPress={this.handleClick}>
+        <LineChart  
+            data={this.state.chartData}
+            width={Dimensions.get('window').width}
+            height={120}
+            width={348}
+            chartConfig={this.state.chartConfig}/>
+        <View style={MyStyles.overlayView}> 
+          <Text style={MyStyles.overlayText}> Hello </Text>
+        </View>
+        <Text style={styles.textActStyle}> 
+        {this.state.activityType} {this.state.activityAmt}</Text>
+        { this.expandedInfo() }
+    </TouchableOpacity> )
   }
 }
 export default Activity;
