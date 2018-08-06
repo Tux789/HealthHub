@@ -30,7 +30,10 @@ class Inputs extends Component {
         password: pass,
       })
     })
-      .then((results) => console.log(results));
+      .then((results) =>{ 
+        if(results.status)
+        console.log(results)
+      });
   }
   //End Jeff's insertion for login auth logic
 
@@ -106,9 +109,16 @@ testAddRoute = () => {
           </TouchableOpacity>
           
           <NavButton onPress={() => this.props.navigation.navigate('Info')}> Home </NavButton>
+          
           <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}>Test A thing</NavButton>
 
+          {/* <NavButton onPress={this.testAddRoute}>Test A thing</NavButton> */}
+          <NavButton onPress={() => this.props.navigation.navigate('UserDash')}> TestDash </NavButton>
+          <NavButton onPress={() => this.props.navigation.navigate('Test')}> Jeff's Page - Graphs </NavButton>
           <Text style={styles.paragraph}>
+          <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}> Tyler's Page - Input User Acty </NavButton>
+          <Text style={styles.paragraph}>
+
             You should consult with a healthcare professional before starting any diet, exercise, supplementation or medication program. Statements on Health Hub about products and health conditions have not been evaluated by the U.S. Food and Drug Administration and are not intended to diagnose, treat, cure, or prevent disease. If you have a health concern of any kind consult with your health care professional. Information presented by Living Fuel is for educational purposes only and is not meant to substitute for the advice of a doctor or other medical professional. Health Hub does not make any medical claims or warranties regarding the use of the products listed on this site. The information presented is general in nature and these remedies may not be for everyone. Like other remedies, supplements and herbs do have side effects. You should consult you doctor before taking any medication.
             </Text>
           <Text style={styles.footnote}>
