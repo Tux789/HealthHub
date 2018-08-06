@@ -19,7 +19,7 @@ const RootStack = createStackNavigator(
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
     Info: HomeScreen,
-    ActivityInput: ActivityInput
+    ActivityInput: ActivityInput,
     Feed: FeedMaster,
     UserDash: UserDash,
     Test: Test,
