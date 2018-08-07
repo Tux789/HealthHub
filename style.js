@@ -69,16 +69,7 @@ const styles = StyleSheet.create({
   paddingLeft: 15,
   paddingRight: 15,
   },
-  
-  //  link: {
-  //    marginTop: 12,
-  //    marginBottom: 5,
-  //   //  color: "blue",
-  //    fontSize: 6,
-  //   // //  fontWeight: "bold",
-  //   //  textAlign: "center",
-  //   //  borderBottomColor: "blue",
-  //  },
+
    linkinfo: {
      marginTop: 12,
      marginBottom: 5,
@@ -91,7 +82,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "blue",
    },
    button: {
-      marginBottom: 30
+      marginBottom: 20
    },
    buttonContainer: {
 
@@ -143,19 +134,23 @@ const styles = StyleSheet.create({
    scrollView: {
     height: 400
    },
+
    imgContain2: {
     paddingTop: 0,
     paddingBottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
    },
+
    styleType: {
     paddingBottom: 20
    },
+
    textActStyle: {
     paddingTop: 5,
     paddingBottom: 10
    },
+
    footnote2: {
     fontSize: 10,
     paddingTop: 80,
