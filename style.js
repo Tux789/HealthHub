@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { Font } from 'expo';
 
 const styles = StyleSheet.create({
     container: {
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
   
    paragraph: {
      fontSize: 10,
-     paddingTop: 55,
+     paddingTop: 35,
      paddingBottom: 15,
      paddingLeft: 15,
      paddingRight: 15,
@@ -61,6 +62,12 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingBottom: 30,
     textAlign: "center",
+  },
+  textInstruct: {
+  paddingTop: 0,
+  paddingBottom: 15,
+  paddingLeft: 15,
+  paddingRight: 15,
   },
   
   //  link: {
@@ -84,11 +91,12 @@ const styles = StyleSheet.create({
     borderBottomColor: "blue",
    },
    button: {
-    position: 'absolute',
-    bottom: 20,
-    left: 199,
-    paddingLeft: 10
+      marginBottom: 30
    },
+   buttonContainer: {
+
+   },
+
    iconcool: {
     width: 25
    },
@@ -113,9 +121,47 @@ const styles = StyleSheet.create({
    },
    accordionstyle: {
     fontFamily: 'raleway-regular',
-   } 
+   }, 
+   AcardStyle: {
+     paddingLeft: 15,
+     paddingRight: 15,
+     width: 350,
+     marginBottom: 20
+   },
+   AcardStyle2: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    width: 350,
+    marginBottom: 25
+  },
 
-
+   home: {
+    flex:1,
+    justifyContent: 'center',
+    backgroundColor: 'white',
+   },
+   scrollView: {
+    height: 400
+   },
+   imgContain2: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+   },
+   styleType: {
+    paddingBottom: 20
+   },
+   textActStyle: {
+    paddingTop: 5,
+    paddingBottom: 10
+   },
+   footnote2: {
+    fontSize: 10,
+    paddingTop: 80,
+    paddingBottom: 30,
+    textAlign: "center",
+   }
   });
 
 export default styles;

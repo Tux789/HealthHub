@@ -10,25 +10,24 @@ import RainbowButtons from "../../components/RainbowButtons";
 class HomeScreen extends Component {
     render() {
         return (
-            <ScrollView>
-                <View style={styles.home}> 
-                <View style={styles.imgContain}>
-                    <Image
-                    style={styles.imgStyle}
-                    resizeMode="contain"
-                    source={require('../../assets/images/healthHubLogo.png')}
-                    />
-                </View>
-                    <Text style={styles.textTitle}> Home component </Text>
-                    <View>
-                    <Accordian>
-                        
-                    </Accordian>
+            <View style={styles.home}>
+                <ScrollView>
+                    <View style={styles.home}> 
+                        <View style={styles.imgContain}>
+                            <Image
+                            style={styles.imgStyle}
+                            resizeMode="contain"
+                            source={require('../../assets/images/healthHubLogo.png')}
+                            />
+                        </View>
+                        <Text style={styles.textTitle}> Home component </Text>
+                        <View>
+                            <Accordian></Accordian>
+                        </View>
                     </View>
-                    <RainbowButtons />
-
-                </View>
-            </ScrollView>    
+                </ScrollView>
+                <RainbowButtons></RainbowButtons>
+            </View>    
         );
     }
 };
