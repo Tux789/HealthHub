@@ -29,7 +29,6 @@ class UserFeed extends Component {
 			<View>
 				<Button
 				  raised
-				  //icon={{name: 'cached'}}
 				  title='BUTTON WITH ICON' />
 			</View>
 		);

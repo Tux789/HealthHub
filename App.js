@@ -6,6 +6,7 @@ import RecoverPasswordScreen from './modules/recover-password/recover-password'
 import Inputs from "./modules/login-account/login-account";
 import Test from "./modules/test-page";
 import HomeScreen from "./modules/home/home";
+import ActivityInput from "./modules/activity-input/ActivityInput";
 import FeedMaster from "./modules/feed/feed";
 import { Font } from 'expo';
 import UserDash from "./modules/userDash/userDash";
@@ -18,10 +19,10 @@ const RootStack = createStackNavigator(
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
     Info: HomeScreen,
+    ActivityInput: ActivityInput,
     Feed: FeedMaster,
     UserDash: UserDash,
     Test: Test,
-    ActivityInput: Test
   }, 
   {
     initialRouteName: 'Login'

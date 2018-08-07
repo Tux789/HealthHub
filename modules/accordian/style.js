@@ -5,7 +5,14 @@ const styles = StyleSheet.create({
        paddingTop: 10
     },
     accordionstyle: {
-        fontFamily: 'raleway-regular',
+        // fontFamily: 'raleway-regular',
+        paddingLeft: 15,
+        paddingRight: 15
+    } ,
+    accordionoutput: {
+        // fontFamily: 'raleway-regular',
+        marginLeft: 15,
+        paddingRight: 15
     } 
 });
 

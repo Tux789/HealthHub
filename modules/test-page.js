@@ -5,8 +5,10 @@ import NavButton from "../components/NavButton";
 import FormInput from "../components/FormInput";
 import TitleImage from "../components/TitleImage";
 import ActivityCard from "../components/ActivityCard/ActivityCard";
-
+import styles from '../style';
 import apiUrl from '../apiRoutes';
+import { Font } from 'expo';
+import RainbowButtons from "../components/RainbowButtons";
 
 class TestView extends React.Component {
 componentDidMount(){  
@@ -25,11 +27,24 @@ componentDidMount(){
 }
 
     render() {
-       return <ScrollView>
-           <TitleImage />   
-           <ActivityCard />
-           <ActivityCard />        
-           </ScrollView>
+       return (
+        <View style={styles.home}>
+          <ScrollView style={styles.scrollView}>
+            <View > 
+                <View style={styles.imgContain2}>
+                  <TitleImage />  
+                </View>
+                <View style={styles.AcardStyle}> 
+                    <ActivityCard />
+                </View>
+                <View style={styles.AcardStyle2}> 
+                    <ActivityCard />  
+                </View>      
+            </View>    
+          </ScrollView>
+          <RainbowButtons></RainbowButtons>
+        </View>
+       )
     }
 }
 export default TestView;
