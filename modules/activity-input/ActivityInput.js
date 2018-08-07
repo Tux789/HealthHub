@@ -5,7 +5,7 @@ import NavButton from "../../components/NavButton"
 import RainbowButtons from "../../components/RainbowButtons"
 import styles from '../../style'
 import apiUrl from "../../apiRoutes"
-'p[;'
+
 class Inputs extends Component {
   state = {
     goalType: '',
@@ -13,6 +13,21 @@ class Inputs extends Component {
     index: null,
     activity: '',
     placeholder: ''
+  }
+
+  componentDidMount(){  
+        fetch(`${apiUrl}/api/isauth`, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },   
+        })
+          .then((results) =>{
+              if(results.status === "401"){
+                this.props.navigation.navigate('Login');
+          }
+        })      
   }
   
   updateIndex = (index) => {
@@ -126,50 +141,51 @@ class Inputs extends Component {
     })
 
     return (
+      <View style={styles.home}>
+      <ScrollView>
         <View style={styles.container}>
 
-          <View style={style.healthHubLogo}>
-            <Image
-              style={styles.imgStyle}
-              resizeMode="contain"
-              source={require('../../assets/images/healthHubLogo.png')}
-            />
-          </View>
+                <View style={style.healthHubLogo}>
+                  <Image
+                    style={styles.imgStyle}
+                    resizeMode="contain"
+                    source={require('../../assets/images/healthHubLogo.png')}
+                  />
+                </View>
 
-          <View style={style.trackingSpan}>
-            <Text style={style.trackingSpanText}>
-              {this.state.activity}
-            </Text>
-          </View>
+                <View style={style.trackingSpan}>
+                  <Text style={style.trackingSpanText}>
+                    {this.state.activity}
+                  </Text>
+                </View>
 
-          <ButtonGroup
-            onPress={this.updateIndex}
-            selectedIndex={this.state.index}
-            buttons={buttons}
-            containerStyle={{height: 60}}
-          />
+                <ButtonGroup
+                  onPress={this.updateIndex}
+                  selectedIndex={this.state.index}
+                  buttons={buttons}
+                  containerStyle={{height: 60}}
+                />
 
-          <TextInput style={styles.input}
-            underlineColorAndroid="transparent"
-            placeholder={this.state.placeholder}
-            placeholderTextColor="#60718d"
-            autoCapitalize="none"
-            onChangeText={this.handleInput} 
-          />
+                <TextInput style={styles.input}
+                  underlineColorAndroid="transparent"
+                  placeholder={this.state.placeholder}
+                  placeholderTextColor="#60718d"
+                  autoCapitalize="none"
+                  onChangeText={this.handleInput} 
+                />
 
-          <TouchableOpacity
-            style={styles.submitButton}
-            onPress={this.postActivity}
-          >
-            <Text style={styles.submitButtonText}> Track Activity </Text>
-          </TouchableOpacity>
-          <RainbowButtons/>
+                <TouchableOpacity
+                        style={styles.submitButton}
+                        onPress={this.postActivity}
+                      >
+                  
+                  <Text style={styles.submitButtonText}> Track Activity </Text>
+                </TouchableOpacity>
 
-        
-          <Text style={styles.footnote}>
-            &#169;2018 HealthHub
-            </Text>
-        </View>
+                    </View>
+                </ScrollView>
+                <RainbowButtons></RainbowButtons>
+            </View> 
     )
   }
 }

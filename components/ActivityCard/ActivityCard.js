@@ -10,7 +10,6 @@ import { MyStyles } from "./style";
 class Activity extends Component {
   state = {
     chartData:{
-     // labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           data: [
             50,
@@ -91,19 +90,6 @@ class Activity extends Component {
 
   render() {
     // use view instead of div when using React Native
-<<<<<<< HEAD
-    return  <TouchableOpacity onPress={this.handleClick}>
-      <LineChart  data={this.state.chartData}
-          width={Dimensions.get('window').width}
-          height={120}
-          chartConfig={this.state.chartConfig}/>
-      <Text> {this.state.activityType}</Text>
-      <Text> {this.state.activityAmt}</Text>
-      { this.expandedInfo() }
-    </TouchableOpacity>
-
- 
-=======
     return ( 
       <TouchableOpacity onPress={this.handleClick}>
         <LineChart  
@@ -118,8 +104,8 @@ class Activity extends Component {
         <Text style={styles.textActStyle}> 
         {this.state.activityType} {this.state.activityAmt}</Text>
         { this.expandedInfo() }
-    </TouchableOpacity> )
->>>>>>> f1553ea4eb759a3d068bcf54eed51538dbb5ccd4
+      </TouchableOpacity> 
+    )
   }
 }
 export default Activity;

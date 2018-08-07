@@ -15,10 +15,11 @@ const Icon = () => {
 }
 
 
+
 const RainbowButtons = props =>
 <View style={styles.buttonCont}>
 <View style={styles.button}>
-<ActionButton buttonColor="rgb(96, 113, 141)" btnOutRange="rgb(121, 137, 136)" icon={ <Icon/> } radius="70" >
+<ActionButton radius={70} buttonColor="rgb(96, 113, 141)" btnOutRange="rgb(121, 137, 136)" icon={ <Icon/> } >
 
         <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="New Task" onPress={() => console.log("notes tapped!")}>
         <View style={styles.tinybutton}>
@@ -32,7 +33,7 @@ const RainbowButtons = props =>
         </ActionButton.Item>
 
         <ActionButton.Item buttonColor='rgb(96, 113, 141)' title="Notifications" onPress={() => {}}>
-            {/* <Text>B</Text> */}
+       
             <Image
                     style={styles.iconsmall}
                     resizeMode="contain"
