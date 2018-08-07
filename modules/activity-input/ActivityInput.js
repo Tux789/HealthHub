@@ -14,6 +14,21 @@ class Inputs extends Component {
     activity: '',
     placeholder: ''
   }
+
+  componentDidMount(){  
+        fetch(`${apiUrl}/api/isauth`, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },   
+        })
+          .then((results) =>{
+              if(results.status === "401"){
+                this.props.navigation.navigate('Login');
+          }
+        })      
+  }
   
   updateIndex = (index) => {
     this.setState({index: index});
