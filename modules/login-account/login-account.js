@@ -1,8 +1,11 @@
-import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView } from 'react-native'
-import NavButton from "../../components/NavButton"
-import styles from '../../style'
+import React, { Component } from 'react';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView } from 'react-native';
+import NavButton from "../../components/NavButton";
+import styles from '../../style';
 import apiUrl from "../../apiRoutes";
+import { Font } from 'expo';
+
+
 
 class Inputs extends Component {
   state = {
@@ -111,14 +114,10 @@ testAddRoute = () => {
           <NavButton onPress={() => this.props.navigation.navigate('Info')}> Home </NavButton>
 
           <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}>Test A thing</NavButton>
-
           {/* <NavButton onPress={this.testAddRoute}>Test A thing</NavButton> */}
           <NavButton onPress={() => this.props.navigation.navigate('UserDash')}> TestDash </NavButton>
           <NavButton onPress={() => this.props.navigation.navigate('Test')}> Jeff's Page - Graphs </NavButton>
           <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}> Tyler's Page - Input User Acty </NavButton>
-          <Text style={styles.paragraph}>
-          </Text>
-
           
           <Text style={styles.paragraph}>
 
@@ -133,4 +132,4 @@ testAddRoute = () => {
     )
   }
 }
-export default Inputs
+export default Inputs 
