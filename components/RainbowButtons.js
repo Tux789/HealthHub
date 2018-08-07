@@ -14,11 +14,13 @@ const Icon = () => {
     </View>
 }
 
+const Radius = 70;
+
 
 const RainbowButtons = props =>
 <View style={styles.buttonCont}>
 <View style={styles.button}>
-<ActionButton radius="70" buttonColor="rgb(96, 113, 141)" btnOutRange="rgb(121, 137, 136)" icon={ <Icon/> } >
+<ActionButton radius={Radius} buttonColor="rgb(96, 113, 141)" btnOutRange="rgb(121, 137, 136)" icon={ <Icon/> } >
 
         <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="New Task" onPress={() => console.log("notes tapped!")}>
         <View style={styles.tinybutton}>
