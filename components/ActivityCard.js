@@ -15,7 +15,7 @@ class Activity extends Component {
       return 
       <ScrollView>
       
-      <view style={styles.styleType}>
+      <view style={styles.expandBox}>
         <ChartImage chart={this.state}/>
         <ActType> {this.state.activityType}</ActType>
         <ActAmt> {this.state.ActAmt}</ActAmt>

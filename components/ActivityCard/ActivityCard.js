@@ -5,13 +5,11 @@ import { LineChart } from "react-native-chart-kit";
 import Comment from "./Comment";
 import CommentsSection from "./CommentsSection";
 import 'babel-polyfill';
-
-import {MyStyles} from "./style";
+import { MyStyles } from "./style";
 
 class Activity extends Component {
   state = {
     chartData:{
-     // labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           data: [
             50,
@@ -34,6 +32,17 @@ class Activity extends Component {
         borderRadius: 16
       }
     },
+     
+    chartConfig2: {
+      backgroundColor: 'rgb(121, 137, 136)',
+      backgroundGradientFrom: 'rgb(96, 113, 141)',
+      backgroundGradientTo: 'rgb(121, 137, 136)',
+      color: (opacity = 1.0) => `rgba(255, 255, 255, ${opacity})`,
+      style: {
+        borderRadius: 16
+      }
+    },
+
     activityType: "",
     activityAmt: 0,
     comments: [], 
@@ -42,7 +51,7 @@ class Activity extends Component {
   componentDidMount(){  
     this.setState({
 
-      activityType: "Track Smoking",
+      activityType: "TRACK SMOKING",
       comments: [{user: "John",comment:"Yo"},{user:"Jack", comment: "NO YO" }],
       activityAmt: 4,
 
@@ -70,13 +79,16 @@ class Activity extends Component {
   }
   expandedInfo = () => {
     if (this.state.expanded) {
-      return <View>
+      return <View style={styles.expandBox}>
         <LineChart
           data={this.state.chartData}
           width={Dimensions.get('window').width}
+          width={347}
           height={220}
-          chartConfig={this.state.chartConfig}
+          chartConfig={this.state.chartConfig2}
         />
+        
+ 
         <CommentsSection>
           {
             this.state.comments.map((comment) =>
@@ -99,14 +111,17 @@ class Activity extends Component {
             width={Dimensions.get('window').width}
             height={120}
             width={348}
-            chartConfig={this.state.chartConfig}/>
+     
+            chartConfig={this.state.chartConfig}
+            />
         <View style={MyStyles.overlayView}> 
           <Text style={MyStyles.overlayText}> Hello </Text>
         </View>
         <Text style={styles.textActStyle}> 
         {this.state.activityType} {this.state.activityAmt}</Text>
         { this.expandedInfo() }
-    </TouchableOpacity> )
+      </TouchableOpacity> 
+    )
   }
 }
 export default Activity;
