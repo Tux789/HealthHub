@@ -4,8 +4,19 @@ import styles from '../../style';
 
 const Comment = props =>
     <View>
-        <Text> {props.user}</Text>
-        <Text> {props.comment}</Text>
+        <View style={styles.userBox}>
+          <Image
+            style={styles.imgUserStyle}
+            resizeMode="contain"
+            source={require('../../assets/images/profile1.png')}
+            />
+            <Text style={styles.commentUser}> {props.user}</Text>
+        </View>
+
+        <View style={styles.commentBox}>
+            <Text style={styles.commentInside}> {props.comment} </Text>
+        </View>
+
     </View>
 
 export default Comment;

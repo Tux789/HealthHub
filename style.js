@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
        paddingLeft: 8,
     },
     
-  
     submitButton: {
        backgroundColor: '#60718d',
        padding: 10,
@@ -62,31 +61,30 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingBottom: 30,
     textAlign: "center",
-  },
-  textInstruct: {
-  paddingTop: 0,
-  paddingBottom: 15,
-  paddingLeft: 15,
-  paddingRight: 15,
-  },
-
-   linkinfo: {
-     marginTop: 12,
-     marginBottom: 5,
    },
 
-   linktext: {
-    color: "blue",
-    fontSize: 16,
-    textAlign: "center",
-    borderBottomColor: "blue",
-   },
-   button: {
-      marginBottom: 20
-   },
-   buttonContainer: {
+    textInstruct: {
+    paddingTop: 0,
+    paddingBottom: 15,
+    paddingLeft: 15,
+    paddingRight: 15,
+    },
 
-   },
+    linkinfo: {
+      marginTop: 12,
+      marginBottom: 5,
+    },
+
+    linktext: {
+      color: "blue",
+      fontSize: 16,
+      textAlign: "center",
+      borderBottomColor: "blue",
+    },
+
+    button: {
+        marginBottom: 20
+    },
 
    iconcool: {
     width: 25
@@ -110,21 +108,24 @@ const styles = StyleSheet.create({
     marginTop: 0,
     padding: 0
    },
+
    accordionstyle: {
     fontFamily: 'raleway-regular',
-   }, 
-   AcardStyle: {
-     paddingLeft: 15,
-     paddingRight: 15,
-     width: 350,
-     marginBottom: 20
    },
-   AcardStyle2: {
+
+   AcardStyle: {
+      paddingLeft: 15,
+      paddingRight: 15,
+      width: 350,
+      marginBottom: 20
+    },
+
+    AcardStyle2: {
     paddingLeft: 15,
     paddingRight: 15,
     width: 350,
     marginBottom: 25
-  },
+    },
 
    home: {
     flex:1,
@@ -156,7 +157,42 @@ const styles = StyleSheet.create({
     paddingTop: 80,
     paddingBottom: 30,
     textAlign: "center",
+   },
+
+   commentUser: {
+    color: "rgb(121, 137, 136)",
+    paddingTop: 2,
+    paddingBottom: 4,
+
+   },
+
+   commentInside: {
+    color: "white",
+   },
+
+   commentBox: {
+    backgroundColor: '#60718d',
+    borderRadius: 10,
+    padding: 6,
+    width: 345
+   },
+   
+   imgUserStyle: {
+      borderRadius: 10,
+      width: 20,
+      height: 20
+   },
+
+   userBox: {
+    flex: 1, 
+    flexDirection: 'row',
+    paddingTop: 12,
+    paddingBottom: 2
+   },
+
+   expandBox: {
    }
+
   });
 
 export default styles;
