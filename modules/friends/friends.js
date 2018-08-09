@@ -149,6 +149,7 @@ class Friends extends Component {
 						    placeholder="Friend's Email"
 						    placeholderTextColor="#60718d"
 						    autoCapitalize="none"
+						    value={this.state.friendEmail}
 						    onChangeText={this.handleFriendEmail} 
 						/>
 						<View>
@@ -162,7 +163,12 @@ class Friends extends Component {
 				        	</TouchableOpacity>
 			        	</View>
 		        	</View>
-	        		<RainbowButtons></RainbowButtons>
+	        		<RainbowButtons
+                    	feed={() => this.props.navigation.navigate('Home')}
+                    	friends={() => this.props.navigation.navigate('Friends')}
+                    	userActivity={() => this.props.navigation.navigate('UserDash')}
+                    	trackActivity={() => this.props.navigation.navigate('ActivityInput')}
+                	/>
 				</View>
 			</KeyboardAvoidingView>
 		)

@@ -109,10 +109,6 @@ const styles = StyleSheet.create({
     padding: 0
    },
 
-   accordionstyle: {
-    fontFamily: 'raleway-regular',
-   },
-
    AcardStyle: {
       paddingLeft: 15,
       paddingRight: 15,

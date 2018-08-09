@@ -21,9 +21,9 @@ const RainbowButtons = props =>
 <View style={styles.button}>
 <ActionButton radius={70} buttonColor="rgb(96, 113, 141)" btnOutRange="rgb(121, 137, 136)" icon={ <Icon/> } >
 
-        <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="New Task" onPress={() => console.log("notes tapped!")}>
+        <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="Feed" onPress={props.feed}>
         <View style={styles.tinybutton}>
-            {/* <Text style={styles.flytext}> Status</Text> */}
+
                <Image
                     style={styles.iconsmalltwo}
                     resizeMode="contain"
@@ -32,39 +32,30 @@ const RainbowButtons = props =>
         </View>
         </ActionButton.Item>
 
-        <ActionButton.Item buttonColor='rgb(96, 113, 141)' title="Notifications" onPress={() => {}}>
+        <ActionButton.Item buttonColor='rgb(96, 113, 141)' title="Friends" onPress={props.friends}>
        
             <Image
                     style={styles.iconsmall}
                     resizeMode="contain"
-                    source={require('../assets/images/watericon.png')}
+                    source={require('../assets/images/friends.png')}
                     />
         </ActionButton.Item>
 
-        <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="All Tasks" onPress={() => {}}>
-            {/* <Text>C</Text> */}
+        <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="User Activity" onPress={props.userActivity}>
+            
             <Image
                     style={styles.iconsmalltwo}
                     resizeMode="contain"
-                    source={require('../assets/images/foodicon.png')}
+                    source={require('../assets/images/userActivity.png')}
                     />
         </ActionButton.Item>
 
-        <ActionButton.Item buttonColor='rgb(96, 113, 141)' title="All Tasks" onPress={() => {}}>
-            {/* <Text>D</Text> */}
+        <ActionButton.Item buttonColor='rgb(96, 113, 141)' title="Track Activity" onPress={props.trackActivity}>
+        
             <Image
                     style={styles.iconsmalltwo}
                     resizeMode="contain"
                     source={require('../assets/images/exerciseicon.png')}
-                    />
-        </ActionButton.Item>
-
-        <ActionButton.Item buttonColor='rgb(121, 137, 136)' title="All Tasks" onPress={() => {}}>
-            {/* <Text>E</Text> */}
-            <Image
-                    style={styles.iconsmalltwo}
-                    resizeMode="contain"
-                    source={require('../assets/images/weighticon.png')}
                     />
         </ActionButton.Item>
 

@@ -15,19 +15,22 @@ class Inputs extends Component {
     placeholder: ''
   }
 
-  componentWillMount(){  
-        fetch(`${apiUrl}/api/isauth`, {
+  componentWillMount() {
+    fetch(`${apiUrl}/api/isauth`, {
           method: 'GET',
           headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },   
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },   
         })
-          .then((results) =>{
-              if(results.status === "401"){
-                this.props.navigation.navigate('Login');
-          }
-        })      
+        .then((results) =>{
+          if(results.status === 401){
+              this.props.navigation.navigate('Login');
+            }
+        })
+        .catch(function(error) {
+          console.log(error)
+        })  
   }
   
   updateIndex = (index) => {
@@ -175,16 +178,21 @@ class Inputs extends Component {
                 />
 
                 <TouchableOpacity
-                        style={styles.submitButton}
-                        onPress={this.postActivity}
-                      >
+                  style={styles.submitButton}
+                  onPress={this.postActivity}
+                >
                   
                   <Text style={styles.submitButtonText}> Track Activity </Text>
                 </TouchableOpacity>
 
                     </View>
                 </ScrollView>
-                <RainbowButtons></RainbowButtons>
+                <RainbowButtons
+                  feed={() => this.props.navigation.navigate('Home')}
+                  friends={() => this.props.navigation.navigate('Friends')}
+                  userActivity={() => this.props.navigation.navigate('UserDash')}
+                  trackActivity={() => this.props.navigation.navigate('ActivityInput')}
+                />
             </View> 
     )
   }

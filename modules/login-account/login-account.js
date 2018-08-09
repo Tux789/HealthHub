@@ -13,6 +13,24 @@ class Inputs extends Component {
     password: ''
   }
 
+  componentWillMount() {
+    fetch(`${apiUrl}/api/isauth`, {
+          method: 'GET',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },   
+        })
+        .then((results) =>{
+          if(results.status === 200){
+              this.props.navigation.navigate('Home');
+          }
+        })
+        .catch(function(error) {
+          console.log(error)
+        })  
+  }
+
   handleEmail = (text) => {
     this.setState({ email: text })
   }
@@ -35,37 +53,10 @@ class Inputs extends Component {
     })
     .then((results) =>{ 
       if(results.status === 200)
-        this.props.navigation.navigate('Test');
-      });
+        this.props.navigation.navigate('Home');
+    });
   }
-  //End Jeff's insertion for login auth logic
 
-  testRoute = () => {
-    fetch(`${apiUrl}/api/friends`, {
-      method: 'get',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      // body: JSON.stringify({
-  
-      // })
-    })
-      .then((results) => console.log(results, results.body));
-  }
-testAddRoute = () => {
-  fetch(`${apiUrl}/api/friends/5b5b4e4721e2bf0014cde22f`, {
-    method: 'put',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    // body: JSON.stringify({
-
-    // })
-  })
-    .then((results) => console.log(results, results.body));
-}
   render() {
     return (
       <KeyboardAvoidingView
@@ -115,11 +106,10 @@ testAddRoute = () => {
             <Text style={styles.linktext}> Forgot Password </Text>
           </TouchableOpacity>
           
-          <NavButton onPress={() => this.props.navigation.navigate('Info')}> Home </NavButton>
-
+          <NavButton onPress={() => this.props.navigation.navigate('Home')}> Home </NavButton>
           <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}>Test A thing</NavButton>
           <NavButton onPress={() => this.props.navigation.navigate('UserDash')}> TestDash </NavButton>
-          <NavButton onPress={() => this.props.navigation.navigate('Test')}> Friends </NavButton>
+          <NavButton onPress={() => this.props.navigation.navigate('Friends')}> Friends </NavButton>
           
           <Text style={styles.paragraph}>
 

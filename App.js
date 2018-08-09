@@ -12,19 +12,17 @@ import { Font } from 'expo';
 import UserDash from "./modules/userDash/userDash";
 import CommentForm from "./components/ActivityCard/CommentForm";
 import Friends from './modules/friends/friends';
-import styles from './style'
 
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
+    Home: FeedMaster,
     Login: Inputs,
     Account: CreateAccountScreen,
     Recover: RecoverPasswordScreen,
-    Info: HomeScreen,
     ActivityInput: ActivityInput,
     Feed: FeedMaster,
     UserDash: UserDash,
-    Test: Friends,
+    Friends: Friends,
   }, 
   {
     initialRouteName: 'Login'
@@ -32,15 +30,7 @@ const RootStack = createStackNavigator(
 );
 
 
-export default class App extends Component {
-  componentDidMount() {
-    Font.loadAsync({
-      'futura-book': require('./assets/fonts/FUW.ttf'),
-      'great-vibes': require('./assets/fonts/GreatVibes-Regular.otf'),
-      'raleway-regular': require('./assets/fonts/Raleway-Regular.ttf')
-    });
-  }
-  apiUrl = process.env.API_BASE_URL || "https://fathomless-shore-28246.herokuapp.com";
+export default class App extends Component { 
   render() {
     return <RootStack/>;
   }
