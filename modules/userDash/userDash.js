@@ -7,6 +7,10 @@ import apiUrl from '../../apiRoutes';
 import RainbowButtons from "../../components/RainbowButtons";
 
 class UserDash extends React.Component {
+    state={
+        userActivities: []
+    }
+
     componentWillMount() {
         fetch(`${apiUrl}/api/isauth`, {
             method: 'GET',
@@ -25,21 +29,39 @@ class UserDash extends React.Component {
         })  
     }
 
+    componentDidMount() {
+        fetch(`${apiUrl}/api/activities`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((response) => response.json())    
+        .then((responsejson) => {
+            console.log(responsejson)
+            this.setState({ 
+                userActivities: responsejson
+            });
+        })
+        .catch(function(error) {
+            console.log(error)
+        })
+    }
+
     render() {
        return (
         <View style={styles.home}>
             <ScrollView style={styles.scrollView}>
-                <View > 
-                    <View style={styles.imgContain2}>
-                        <TitleImage />  
-                    </View>
-                    <View style={styles.AcardStyle}> 
-                        <ActivityCard />
-                    </View>
-                    <View style={styles.AcardStyle2}> 
-                        <ActivityCard />  
-                    </View>      
-                </View>    
+                {
+                    this.state.userActivities.map((activity) => (
+                        <ActivityCard
+                            key={activity._id}
+                            title={activity.activityType}
+                        />
+                    ))
+                }
+                    
             </ScrollView>
             <RainbowButtons
                 feed={() => this.props.navigation.navigate('Home')}

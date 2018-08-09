@@ -91,8 +91,8 @@ class Activity extends Component {
  
         <CommentsSection>
           {
-            this.state.comments.map((comment) =>
-              <Comment user={comment.user} comment={comment.comment} />
+            this.state.comments.map((comment, i) =>
+              <Comment key={i} user={comment.user} comment={comment.comment} />
             )
           }
         </CommentsSection>
