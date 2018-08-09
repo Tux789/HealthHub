@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, Scr
 import NavButton from "../../components/NavButton";
 import styles from '../../style';
 import apiUrl from "../../apiRoutes";
-import { Font } from 'expo';
 
 
 
@@ -15,20 +14,20 @@ class Inputs extends Component {
 
   componentWillMount() {
     fetch(`${apiUrl}/api/isauth`, {
-          method: 'GET',
-          headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
-            },   
-        })
-        .then((results) =>{
-          if(results.status === 200){
-              this.props.navigation.navigate('Home');
-          }
-        })
-        .catch(function(error) {
-          console.log(error)
-        })  
+      method: 'GET',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },   
+    })
+    .then((results) =>{
+      if(results.status === 200){
+          this.props.navigation.navigate('Home');
+      }
+    })
+    .catch(function(error) {
+      console.log(error)
+    })  
   }
 
   handleEmail = (text) => {
@@ -61,7 +60,7 @@ class Inputs extends Component {
     return (
       <KeyboardAvoidingView
         behavior="padding"
-        style={{ flex: 1, justifyContent: 'flex-end'}}
+        style={{ flex: 1, justifyContent: 'space-between' }}
       >
       <ScrollView>
         <View style={styles.container}>
@@ -105,11 +104,6 @@ class Inputs extends Component {
             onPress={() => this.props.navigation.navigate('Recover')}>
             <Text style={styles.linktext}> Forgot Password </Text>
           </TouchableOpacity>
-          
-          <NavButton onPress={() => this.props.navigation.navigate('Home')}> Home </NavButton>
-          <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}>Test A thing</NavButton>
-          <NavButton onPress={() => this.props.navigation.navigate('UserDash')}> TestDash </NavButton>
-          <NavButton onPress={() => this.props.navigation.navigate('Friends')}> Friends </NavButton>
           
           <Text style={styles.paragraph}>
 

@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     container: {
        backgroundColor: 'white',
        flex: 1,
+       paddingBottom: 35
     },
     
     input: {
