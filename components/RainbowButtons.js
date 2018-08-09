@@ -7,10 +7,10 @@ import styles from '../style';
 const Icon = () => {
     return <View style={styles.iconmain} >
          <Image
-                    style={styles.iconcool}
-                    resizeMode="contain"
-                    source={require('../assets/images/handicon.png')}
-                    />
+            style={styles.iconcool}
+            resizeMode="contain"
+            source={require('../assets/images/handicon.png')}
+        />
     </View>
 }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'React';
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView, KeyboardAvoidingView } from 'react-native';
 import apiUrl from "../../apiRoutes";
 import FriendCard from "../../components/FriendCard";
 import RainbowButtons from "../../components/RainbowButtons";
@@ -21,7 +21,7 @@ class Friends extends Component {
             },   
         })
         .then((results) =>{
-        	if(results.status === "401"){
+        	if(results.status === 401){
             	this.props.navigation.navigate('Login');
           	}
         })
@@ -84,7 +84,7 @@ class Friends extends Component {
 
 		const style = StyleSheet.create({
 	    	healthHubLogo: {
-		        paddingTop: 10,
+		        paddingTop: 0,
 		        justifyContent: 'center',
 		        alignItems: 'center'
 	    	},
@@ -107,9 +107,6 @@ class Friends extends Component {
 	    		fontWeight: 'bold',
 	    		color: 'white'
 	    	},
-	    	scrollView: {
-	    		marginBottom: 0,
-	    	},
 	    	addFriendInput: {
 	    		marginBottom: 90,
 	    		borderTopWidth: 5,
@@ -120,51 +117,54 @@ class Friends extends Component {
 	    })
 
 		return (
-			<View style={styles.home}>
-			<View style={style.healthHubLogo}>
-	                	<Image
-	                    	style={styles.imgStyle}
-	                    	resizeMode="contain"
-	                    	source={require('../../assets/images/healthHubLogo.png')}
-	                	/>
-	                </View>
-	                <View style={style.friendsHeaderView}>
-	                	<Text style={style.friendsHeader}>Friends</Text>
-	                </View>
-				<ScrollView style={style.scrollView}>
-					<View containerStyle={{marginBottom: 20}}>
-						{
-						    this.state.friends.map((friend, i) => (
-						    	<FriendCard
-						    		key={i}
-						    		title={friend.email}
-						    	/>
-						    ))
-						}
-					</View>
-				</ScrollView>
-				<View  style={style.addFriendInput}>
-						<TextInput style={styles.input}
-				            underlineColorAndroid="transparent"
-				            placeholder="Friend's Email"
-				            placeholderTextColor="#60718d"
-				            autoCapitalize="none"
-				            onChangeText={this.handleFriendEmail} 
-				        />
-				        <View>
-					        <TouchableOpacity
-					            style={styles.submitButton}
-					            onPress={
-					            	() => this.addFriend(this.state.friendEmail)
-					            }
-				            >
-		            			<Text style={styles.submitButtonText}> Add New Friend </Text>
-		        			</TouchableOpacity>
-	        			</View>
-        			</View>
-				<RainbowButtons></RainbowButtons>
-			</View>
-
+			<KeyboardAvoidingView 
+				behavior="padding"
+				style={{ flex: 1, justifyContent: 'space-between'}}
+			>
+				<View style={styles.home}>
+					<View style={{ justifyContent: 'flex-end', paddingBottom: 85 }}>
+					<View style={style.healthHubLogo}>
+		                <Image
+		                    style={styles.imgStyle}
+		                    resizeMode="contain"
+		                    source={require('../../assets/images/healthHubLogo.png')}
+		                />
+		            </View>
+		                <View style={style.friendsHeaderView}>
+		                	<Text style={style.friendsHeader}>Friends</Text>
+		                </View>
+						<ScrollView style={{marginBottom: 20}}>
+							{
+							    this.state.friends.map((friend, i) => (
+							    	<FriendCard
+							    		key={i}
+							    		title={friend.email}
+							    	/>
+							    ))
+							}
+						</ScrollView>
+						<TextInput 
+							style={styles.input}
+						    underlineColorAndroid="transparent"
+						    placeholder="Friend's Email"
+						    placeholderTextColor="#60718d"
+						    autoCapitalize="none"
+						    onChangeText={this.handleFriendEmail} 
+						/>
+						<View>
+							<TouchableOpacity
+							    style={styles.submitButton}
+							    onPress={
+							    	() => this.addFriend(this.state.friendEmail)
+							    }
+						    >
+				            	<Text style={styles.submitButtonText}> Add New Friend </Text>
+				        	</TouchableOpacity>
+			        	</View>
+		        	</View>
+	        		<RainbowButtons></RainbowButtons>
+				</View>
+			</KeyboardAvoidingView>
 		)
 	}
 }

@@ -128,9 +128,9 @@ const styles = StyleSheet.create({
     },
 
    home: {
-    flex:1,
-    justifyContent: 'center',
+    flex: 1,
     backgroundColor: 'white',
+    paddingBottom: 15
    },
    scrollView: {
     height: 400

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Image, Button, ScrollView, KeyboardAvoidingView } from 'react-native';
 import NavButton from "../../components/NavButton";
 import styles from '../../style';
 import apiUrl from "../../apiRoutes";
@@ -33,9 +33,9 @@ class Inputs extends Component {
         password: pass,
       })
     })
-      .then((results) =>{ 
-        if(results.status)
-        console.log(results)
+    .then((results) =>{ 
+      if(results.status === 200)
+        this.props.navigation.navigate('Test');
       });
   }
   //End Jeff's insertion for login auth logic
@@ -68,6 +68,10 @@ testAddRoute = () => {
 }
   render() {
     return (
+      <KeyboardAvoidingView
+        behavior="padding"
+        style={{ flex: 1, justifyContent: 'flex-end'}}
+      >
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.imgContain}>
@@ -114,7 +118,6 @@ testAddRoute = () => {
           <NavButton onPress={() => this.props.navigation.navigate('Info')}> Home </NavButton>
 
           <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}>Test A thing</NavButton>
-          {/* <NavButton onPress={this.testAddRoute}>Test A thing</NavButton> */}
           <NavButton onPress={() => this.props.navigation.navigate('UserDash')}> TestDash </NavButton>
           <NavButton onPress={() => this.props.navigation.navigate('Test')}> Friends </NavButton>
           
@@ -128,6 +131,7 @@ testAddRoute = () => {
                 </View>
 
       </ScrollView>
+      </KeyboardAvoidingView>
     )
   }
 }
