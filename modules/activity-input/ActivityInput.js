@@ -47,7 +47,7 @@ class Inputs extends Component {
       case 1:
         this.setState({ 
         	activity: 'Track Exercise', 
-        	goalType: 'TRACK SLEEP',
+        	goalType: 'TRACK EXERCISE',
         	placeholder: 'Minutes exercised'
 
         })
@@ -69,7 +69,7 @@ class Inputs extends Component {
       case 4:
         this.setState({ 
         	activity: 'Track Social Interactions',
-        	goalType: 'SOCIAL INTERACTIONS',
+        	goalType: 'IMPROVE SOCIAL INTERACTIONS',
         	placeholder: 'Number of social interactions' 
         })
         break;       
@@ -81,8 +81,112 @@ class Inputs extends Component {
   	this.setState({ numberInput: count });
   }
 
-  postActivity = () => {
-	alert(`Goal ${this.state.goalType} Input ${this.state.numberInput}`)
+  postActivity = (goalType, number) => {
+    switch (goalType) {
+      case 'TRACK SMOKING':
+        fetch(`${apiUrl}/api/activities`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+            body: JSON.stringify({
+              goalType: goalType,
+              currentSmokes: number
+            })
+        })
+        .then((results) =>{
+          console.log(results);
+          alert('Activity Posted');
+        })
+        .catch(function(error) {
+          console.log(error)
+        }); 
+        break;
+      case 'TRACK EXERCISE':
+        fetch(`${apiUrl}/api/activities`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+            body: JSON.stringify({
+              goalType: goalType,
+              currentExerciseMinutes: number
+            })
+        })
+        .then((results) =>{
+          console.log(results);
+          alert('Activity Posted');
+        })
+        .catch(function(error) {
+          console.log(error)
+        });
+        break;
+      case 'TRACK SLEEP':
+        fetch(`${apiUrl}/api/activities`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+            body: JSON.stringify({
+              goalType: goalType,
+              currentSleepHours: number
+            })
+        })
+        .then((results) =>{
+          console.log(results);
+          alert('Activity Posted');
+        })
+        .catch(function(error) {
+          console.log(error)
+        });
+        break;
+      case 'TRACK WEIGHT':
+        fetch(`${apiUrl}/api/activities`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+            body: JSON.stringify({
+              goalType: goalType,
+              currentWeight: number
+            })
+        })
+        .then((results) =>{
+          console.log(results);
+          alert('Activity Posted');
+        })
+        .catch(function(error) {
+          console.log(error)
+        });
+        break;
+      case 'IMPROVE SOCIAL INTERACTIONS':
+        fetch(`${apiUrl}/api/activities`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+            body: JSON.stringify({
+              goalType: goalType,
+              currentSocialOutings: number
+            })
+        })
+        .then((results) =>{
+          console.log(results);
+          alert('Activity Posted');
+        })
+        .catch(function(error) {
+          console.log(error)
+        });
+        break;
+      default:
+        console.log("Error posting activity")
+    }
+    this.setState({ numberInput: '' }); 
   }
 
  
@@ -174,12 +278,13 @@ class Inputs extends Component {
                   placeholder={this.state.placeholder}
                   placeholderTextColor="#60718d"
                   autoCapitalize="none"
+                  value={this.state.numberInput}
                   onChangeText={this.handleInput} 
                 />
 
                 <TouchableOpacity
                   style={styles.submitButton}
-                  onPress={this.postActivity}
+                  onPress={() => this.postActivity(this.state.goalType, this.state.numberInput)}
                 >
                   
                   <Text style={styles.submitButtonText}> Track Activity </Text>
