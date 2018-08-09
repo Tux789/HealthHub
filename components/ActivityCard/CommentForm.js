@@ -8,7 +8,7 @@ import styles from '../../style';
 class CommentForm extends Component {
 
     state = {
-        comment: "",
+        comment: ""
     }
 
     handleComment = (text) => {
@@ -17,8 +17,8 @@ class CommentForm extends Component {
 
 
     addComment = (comment) => {
-        fetch(`${apiUrl}/api/activities`, {
-            method: 'POST',
+        fetch(`${apiUrl}/api/activities/${this.props.commentKey}`, {
+            method: 'PUT',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

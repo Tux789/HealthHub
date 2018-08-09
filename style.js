@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     paddingBottom: 15
    },
    scrollView: {
-    height: 400
+    height: 400,
    },
 
    imgContain2: {
@@ -171,7 +171,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#60718d',
     borderRadius: 10,
     padding: 6,
-    width: 345
+    width: '95%',
+    marginLeft: '2.5%'
    },
    
    imgUserStyle: {
@@ -184,10 +185,12 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'row',
     paddingTop: 12,
-    paddingBottom: 2
+    paddingBottom: 2,
+    marginLeft: '2.5%'
    },
 
    expandBox: {
+
    }
 
   });

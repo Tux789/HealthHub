@@ -4,11 +4,13 @@ import styles from '../../style';
 import CommentForm from './CommentForm';
 
 const CommentsSection = props =>
-    <View>
+    <View style={{justifyContent: 'center'}}>
         
         {props.children}
 
-        <CommentForm />
+        <CommentForm 
+        	commentKey={props.commentKey}
+        />
         
     </View>
 
