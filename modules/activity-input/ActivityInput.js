@@ -15,7 +15,7 @@ class Inputs extends Component {
     placeholder: ''
   }
 
-  componentDidMount(){  
+  componentWillMount(){  
         fetch(`${apiUrl}/api/isauth`, {
           method: 'GET',
           headers: {

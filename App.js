@@ -11,6 +11,7 @@ import FeedMaster from "./modules/feed/feed";
 import { Font } from 'expo';
 import UserDash from "./modules/userDash/userDash";
 import CommentForm from "./components/ActivityCard/CommentForm";
+import Friends from './modules/friends/friends';
 import styles from './style'
 
 const RootStack = createStackNavigator(
@@ -23,7 +24,7 @@ const RootStack = createStackNavigator(
     ActivityInput: ActivityInput,
     Feed: FeedMaster,
     UserDash: UserDash,
-    Test: CommentForm,
+    Test: Friends,
   }, 
   {
     initialRouteName: 'Login'

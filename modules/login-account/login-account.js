@@ -116,8 +116,7 @@ testAddRoute = () => {
           <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}>Test A thing</NavButton>
           {/* <NavButton onPress={this.testAddRoute}>Test A thing</NavButton> */}
           <NavButton onPress={() => this.props.navigation.navigate('UserDash')}> TestDash </NavButton>
-          <NavButton onPress={() => this.props.navigation.navigate('Test')}> Jeff's Page - Graphs </NavButton>
-          <NavButton onPress={() => this.props.navigation.navigate('ActivityInput')}> Tyler's Page - Input User Acty </NavButton>
+          <NavButton onPress={() => this.props.navigation.navigate('Test')}> Friends </NavButton>
           
           <Text style={styles.paragraph}>
 

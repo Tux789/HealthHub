@@ -11,7 +11,7 @@ import { Font } from 'expo';
 import RainbowButtons from "../components/RainbowButtons";
 
 class TestView extends React.Component {
-componentDidMount(){  
+componentWillMount(){  
         fetch(`${apiUrl}/api/isauth`, {
           method: 'GET',
           headers: {
@@ -19,10 +19,13 @@ componentDidMount(){
             'Content-Type': 'application/json',
           },   
         })
-          .then((results) =>{
-              if(results.status === "401"){
-                this.props.navigation.navigate('Login');
+        .then((results) =>{
+          if(results.status === "401"){
+            this.props.navigation.navigate('Login');
           }
+        })
+        .catch(function(error) {
+          console.log(error)
         })      
 }
 
