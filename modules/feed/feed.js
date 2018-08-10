@@ -108,7 +108,7 @@ class MasterFeed extends React.Component {
                                     <ActivityCard
                                         key={activity.activity._id}
                                         commentKey={activity.activity._id}
-                                        headerText={'testuser1'}
+                                        headerText={'newguy1'}
                                         subText={activity.activity.goalType}
                                         chartData={activity.chartData}
                                     />
