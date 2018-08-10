@@ -15,9 +15,9 @@ This is app will allow users to share their overall fitness goals with their fri
 We all do better when have those positive vibes coming our way, but we also understand that it can be tough to gauge health and fitness progress when we're busy. To solve this, we'll also be coding a simple solution using React Native, so users also have a private dashboard that accurately charts progress for each goal, once a user selects one and starts using the app's simple interface to make updates. 
 
 # Viewing the App
-Since this is a mobile app, you will need to download Expo, so you can activate a mockup simulator to view it.
+Since this is a mobile app, you will need to download Expo, so you can activate a mockup simulator to view it. (NOTE: This means you should also clone the repo to your local machine).
 
-- You can use this link to see learn how to install it: https://expo.io/learn
+- You can use this link to see learn how to install expo: https://expo.io/learn
 
 - After it's installed, run npm install to run the app.
 
