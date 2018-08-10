@@ -12,9 +12,16 @@ A fun, smart way to get your health on!
 *HealthHub* 
 This is app will allow users to share their overall fitness goals with their friends. Once invited, friends can comment and offer support. 
 
-We all do better when have those positive vibes coming our way, but we also understand that it can be tough to guage health and fitness progress when we're busy. To solve this, we'll also be coding a simple, elegant solution, so users also have a private dashboard that accurately charts progress for each goal, once a user selects one and starts using the app's simple interface to make updates. 
+We all do better when have those positive vibes coming our way, but we also understand that it can be tough to gauge health and fitness progress when we're busy. To solve this, we'll also be coding a simple solution using React Native, so users also have a private dashboard that accurately charts progress for each goal, once a user selects one and starts using the app's simple interface to make updates. 
 
-Once a milestones are 100% achieved, trophies are added to each user's personal trophy case.
+# Viewing the App
+Since this is a mobile app, you will need to download Expo, so you can activate a mockup simulator to view it.
+
+- You can use this link to see learn how to install it: https://expo.io/learn
+
+- After it's installed, run npm install to run the app.
+
+- You can also click this link to see our full set of how-to instructions for running the simulator:            https://docs.google.com/document/d/1ijnMGpHevzBRB96b4qhhU1VnaRwOnOexSwO5hTY6dUI/edit
 
 # Initial Tasks
 - Initial Wireframe and Readme (Jessica & Group)
@@ -29,9 +36,12 @@ Once a milestones are 100% achieved, trophies are added to each user's personal 
 # Concept Sketch 
 https://balsamiq.cloud/sxukert/pnkkqb5/r2278
 
-# Tentative List of APIs
-* Chart.js
-* Passport
+# Technologies
+* React Native
+* React Native Chart Kit
+* Expo
+* React Native Circular Action Menu
+* MongoDB
 
 #Tentative List of Additional Libraries & Frameworks
 * React Native
